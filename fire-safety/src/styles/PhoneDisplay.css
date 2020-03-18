@@ -1,11 +1,25 @@
 .phoneContainer {
-  width: 250px;
   text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
 }
 
-.phoneButton {
-  
+.backSpaceIcon {
+  top: 15px;
+  color: grey;
+}
+
+.textDisplay {
+  color: grey;
+  font-size: 30px;
+  text-align: center;
+  --inner-padding-top: 20px;
+}
+
+.numberDisplay {
+  color: black;
+  font-size: 35px;
+  text-align: center;
+}
+
+.numberLabel {
+  height: 1em
 }

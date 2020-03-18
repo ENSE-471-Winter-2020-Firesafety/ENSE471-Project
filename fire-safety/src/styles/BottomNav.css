@@ -1,0 +1,12 @@
+.bottomNav {
+  text-align: center;
+}
+
+.toolBarIcon {
+  color: grey;
+}
+
+.selected {
+  background-color: rgb(240, 240, 240);
+  height: 100%;
+}

@@ -1,5 +1,7 @@
 {
   "name": "fire-safety",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "react"
 }
