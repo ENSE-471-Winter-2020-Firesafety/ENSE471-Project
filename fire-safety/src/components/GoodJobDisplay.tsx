@@ -1,10 +1,11 @@
 import React from 'react';
-import { IonIcon, IonItem, IonImg, IonRouterLink } from '@ionic/react';
-import { chevronBackOutline } from 'ionicons/icons';
-import '../styles/TryAgainDisplay.css';
+import { IonCol, IonGrid, IonIcon, IonItem, IonImg, IonRouterLink, IonRow } from '@ionic/react';
+import { chevronBackOutline, chevronForwardOutline } from 'ionicons/icons';
 import '../styles/General.css';
 
-interface GoodJobDisplay {
+interface GoodJobRoutingProps {
+    prevPage: string;
+    nextPage: string;
 }
 
 type Item = {
@@ -14,15 +15,29 @@ type Item = {
 
 const sparkyImg: Item = { src: 'assets/images/sparky.jpg', text: ''}
 
-const GoodJobDisplay: React.FC<GoodJobDisplay> = (props: GoodJobDisplay) => (
+const GoodJobDisplay: React.FC<GoodJobRoutingProps> = (props: GoodJobRoutingProps) => (
   <>
     <IonItem className='textDisplay'>
       Good Job!
     </IonItem>
     <IonImg src={sparkyImg.src} className="contentImage"/>
-    <IonRouterLink href='./home'>
-      <IonIcon icon={chevronBackOutline} size="large" className='backIcon'></IonIcon>
-    </IonRouterLink>
+
+    <IonGrid className='ion-text-center'>
+      <IonRow>
+        <IonCol>
+          <IonRouterLink href={props.prevPage}>
+            <IonIcon icon={chevronBackOutline} size="large" className='backIcon'></IonIcon>
+          </IonRouterLink>
+        </IonCol>
+        <IonCol>
+        </IonCol>
+        <IonCol >
+          <IonRouterLink href={props.nextPage}>
+            <IonIcon icon={chevronForwardOutline} size="large" className="toolBarIcon"></IonIcon>
+          </IonRouterLink>
+        </IonCol>
+      </IonRow>
+    </IonGrid>
   </>
 )
 

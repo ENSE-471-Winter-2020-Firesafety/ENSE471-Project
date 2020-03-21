@@ -2,7 +2,28 @@
   width: 300px;
 }
 
+.textDisplay {
+  color: grey;
+  font-size: 35px;
+  text-align: center;
+  --inner-padding-top: 20px;
+}
+
+.numberDisplay {
+  color: black;
+  font-size: 35px;
+  text-align: center;
+}
 
 .backIcon {
   color: grey;
+}
+
+.contentImage {
+  padding: 50px 25px;
+  height: 400px
+}
+
+.centered {
+  align-items: center;
 }

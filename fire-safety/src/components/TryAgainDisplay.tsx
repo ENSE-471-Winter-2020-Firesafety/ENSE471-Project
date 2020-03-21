@@ -1,7 +1,6 @@
 import React from 'react';
 import { IonIcon, IonItem, IonImg, IonRouterLink } from '@ionic/react';
 import { chevronBackOutline } from 'ionicons/icons';
-import '../styles/TryAgainDisplay.css';
 import '../styles/General.css';
 
 interface TryAgainDisplayProps {
@@ -20,7 +19,7 @@ const TryAgainDisplay: React.FC<TryAgainDisplayProps> = (props: TryAgainDisplayP
       Try Again!
     </IonItem>
     <IonImg src={thumbsUpImage.src} className="contentImage"/>
-    <IonRouterLink href='./home'>
+    <IonRouterLink href='./home' routerDirection='root'>
       <IonIcon icon={chevronBackOutline} size="large" className='backIcon'></IonIcon>
     </IonRouterLink>
   </>

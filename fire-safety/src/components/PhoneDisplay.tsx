@@ -86,7 +86,7 @@ const PhoneDisplay: React.FC<PhoneDisplayProps> = () => {
         <IonRow>
           <IonCol></IonCol>
           <IonCol>
-            <IonRouterLink href={isCorrect() ? './goodjob' : './tryagain'}>
+            <IonRouterLink href={isCorrect() ? './goodjob/home/tryagain' : './tryagain'}>
               <IonButton shape="round" fill="outline" color="success" size="large" className="phoneButton">
                 <IonIcon icon={call} size="small"></IonIcon>
               </IonButton>
