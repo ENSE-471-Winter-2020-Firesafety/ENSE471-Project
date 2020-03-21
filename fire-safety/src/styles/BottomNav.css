@@ -1,5 +1,7 @@
 .bottomNav {
   text-align: center;
+  position: fixed;
+  bottom: 0;
 }
 
 .toolBarIcon {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { backspaceOutline, call } from 'ionicons/icons';
-import { IonButton, IonCol, IonGrid, IonIcon, IonItem, IonLabel, IonRow } from '@ionic/react';
+import { IonButton, IonCol, IonGrid, IonIcon, IonItem, IonLabel, IonRouterLink, IonRow } from '@ionic/react';
 import '../styles/General.css';
 import '../styles/PhoneDisplay.css';
 
@@ -86,9 +86,11 @@ const PhoneDisplay: React.FC<PhoneDisplayProps> = () => {
         <IonRow>
           <IonCol></IonCol>
           <IonCol>
-            <IonButton shape="round" fill="outline" color="success" size="large" className="phoneButton" onClick={() => isCorrect() ? alert('yay') : alert(':(')}>
-              <IonIcon icon={call} size="small"></IonIcon>
-            </IonButton>
+            <IonRouterLink href={isCorrect() ? './goodjob' : './tryagain'}>
+              <IonButton shape="round" fill="outline" color="success" size="large" className="phoneButton">
+                <IonIcon icon={call} size="small"></IonIcon>
+              </IonButton>
+            </IonRouterLink>
           </IonCol>
           <IonCol>
             <IonButton shape="round" fill="clear" className="phoneButton" onClick={() => removeCharacter()}>
