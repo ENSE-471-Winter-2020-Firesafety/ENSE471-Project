@@ -15,7 +15,7 @@
   text-align: center;
 }
 
-.backIcon {
+.navIcon {
   color: grey;
 }
 
@@ -26,4 +26,11 @@
 
 .centered {
   align-items: center;
+}
+
+.hintIconContainer {
+  zoom: 4;
+  text-align: center;
+  height: 50%;
+  padding-top: 30%;
 }

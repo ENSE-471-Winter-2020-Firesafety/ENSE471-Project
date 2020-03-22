@@ -4,6 +4,7 @@ import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
 import GoodJobPage from './pages/GoodJobPage';
+import QuestionPage from './pages/QuestionPage';
 import TryAgainPage from './pages/TryAgainPage';
 
 /* Core CSS required for Ionic components to work properly */
@@ -32,6 +33,7 @@ const App: React.FC = () => (
         <Route path="/home" component={Home} exact={true} />
         <Route path="/goodjob/:prevPage/:nextPage" component={GoodJobPage} exact={true} />
         <Route path="/tryagain" component={TryAgainPage} exact={true} />
+        <Route path="/question/:choice" component={QuestionPage} exact={true} />
         <Route exact path="/" render={() => <Redirect to="/home" />} />
       </IonRouterOutlet>
     </IonReactRouter>

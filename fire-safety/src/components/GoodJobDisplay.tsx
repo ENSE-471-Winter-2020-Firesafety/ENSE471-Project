@@ -26,7 +26,7 @@ const GoodJobDisplay: React.FC<GoodJobRoutingProps> = (props: GoodJobRoutingProp
       <IonRow>
         <IonCol>
           <IonRouterLink href={props.prevPage}>
-            <IonIcon icon={chevronBackOutline} size="large" className='backIcon'></IonIcon>
+            <IonIcon icon={chevronBackOutline} size="large" className='navIcon'></IonIcon>
           </IonRouterLink>
         </IonCol>
         <IonCol>

@@ -15,17 +15,17 @@ const BottomNav: React.FC<BottomNavProps> = (props: BottomNavProps) => (
       <IonRow>
         <IonCol className={props.selected == SelectedPage.HOME ? "selected" : ""}>
           <IonRouterLink href="./home">
-            <IonIcon icon={apps} size="large" className="toolBarIcon"></IonIcon>
+            <IonIcon icon={apps} size="large" className='toolBarIcon'></IonIcon>
           </IonRouterLink>
         </IonCol>
         <IonCol className={props.selected == SelectedPage.QUESTIONS ? "selected" : ""}>
           <IonRouterLink href="./home">
-            <IonIcon icon={chatbubbleEllipses} size="large" className="toolBarIcon"></IonIcon>
+            <IonIcon icon={chatbubbleEllipses} size="large" className='toolBarIcon'></IonIcon>
           </IonRouterLink>
         </IonCol>
         <IonCol className={props.selected == SelectedPage.INFO ? "selected" : ""}>
           <IonRouterLink href="./home">
-            <IonIcon icon={informationCircle} size="large" className="toolBarIcon"></IonIcon>
+            <IonIcon icon={informationCircle} size="large" className='toolBarIcon'></IonIcon>
           </IonRouterLink>
         </IonCol>
       </IonRow>
