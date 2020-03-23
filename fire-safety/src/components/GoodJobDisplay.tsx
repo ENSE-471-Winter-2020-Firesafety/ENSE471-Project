@@ -6,6 +6,7 @@ import '../styles/General.css';
 interface GoodJobProps {
     prevPage: string;
     nextPage: string;
+    numStars: number;
 }
 
 type Item = {
@@ -13,32 +14,39 @@ type Item = {
     text: string;
 }
 
-const sparkyImg: Item = { src: 'assets/images/sparky.jpg', text: ''}
+const GoodJobDisplay: React.FC<GoodJobProps> = (props: GoodJobProps) => {
+    let { numStars } = props;
 
-const GoodJobDisplay: React.FC<GoodJobProps> = (props: GoodJobProps) => (
-  <>
-    <IonItem className='textDisplay'>
-      Good Job!
-    </IonItem>
-    <IonImg src={sparkyImg.src} className="contentImage"/>
+    // set a default of 5 stars if loading fails
+    if (numStars < 0 || numStars > 5) {
+        numStars = 5;
+    }
+    const sparkyImg: Item = { src: `assets/images/sparky-${numStars}.jpg`, text: ''}
+    return (
+      <>
+        <IonItem className='textDisplay'>
+          Good Job!
+        </IonItem>
+        <IonImg src={sparkyImg.src} className="contentImage"/>
 
-    <IonGrid className='ion-text-center'>
-      <IonRow>
-        <IonCol>
-          <IonRouterLink href={props.prevPage}>
-            <IonIcon icon={chevronBackOutline} size="large" className='navIcon'></IonIcon>
-          </IonRouterLink>
-        </IonCol>
-        <IonCol>
-        </IonCol>
-        <IonCol >
-          <IonRouterLink href={props.nextPage}>
-            <IonIcon icon={chevronForwardOutline} size="large" className="toolBarIcon"></IonIcon>
-          </IonRouterLink>
-        </IonCol>
-      </IonRow>
-    </IonGrid>
-  </>
-)
+        <IonGrid className='ion-text-center'>
+          <IonRow>
+            <IonCol>
+              <IonRouterLink href={props.prevPage}>
+                <IonIcon icon={chevronBackOutline} size="large" className='navIcon'></IonIcon>
+              </IonRouterLink>
+            </IonCol>
+            <IonCol>
+            </IonCol>
+            <IonCol >
+              <IonRouterLink href={props.nextPage}>
+                <IonIcon icon={chevronForwardOutline} size="large" className="toolBarIcon"></IonIcon>
+              </IonRouterLink>
+            </IonCol>
+          </IonRow>
+        </IonGrid>
+      </>
+    )
+}
 
 export default GoodJobDisplay;

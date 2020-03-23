@@ -9,13 +9,18 @@ import './Page.css';
 interface GoodJobRoutingProps extends RouteComponentProps<{
     prevPage: string;
     nextPage: string;
+    numStars: string;
 }> {}
 
 const GoodJobPage: React.FC<GoodJobRoutingProps> = ({match}) => {
   return (
     <IonPage>
       <IonContent className='container'>
-        <GoodJobDisplay prevPage={match.params.prevPage.replace(':', '/')} nextPage={match.params.nextPage.replace(':', '/')}/>
+        <GoodJobDisplay
+          prevPage={match.params.prevPage.replace(':', '/')}
+          nextPage={match.params.nextPage.replace(':', '/')}
+          numStars={parseInt(match.params.numStars)}
+        />
         <BottomNav selected={SelectedPage.NONE}/>
       </IonContent>
     </IonPage>

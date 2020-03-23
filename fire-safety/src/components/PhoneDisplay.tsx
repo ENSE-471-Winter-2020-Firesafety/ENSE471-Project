@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { backspaceOutline, call } from 'ionicons/icons';
-import { IonButton, IonCol, IonGrid, IonIcon, IonItem, IonLabel, IonRouterLink, IonRow } from '@ionic/react';
+import { CreateAnimation, IonButton, IonCol, IonGrid, IonIcon, IonItem, IonLabel, IonRouterLink, IonRow } from '@ionic/react';
 import '../styles/General.css';
 import '../styles/PhoneDisplay.css';
 import PhoneButton from './PhoneButton';
@@ -12,7 +12,9 @@ const PhoneDisplay: React.FC<PhoneDisplayProps> = () => {
 
   // adds a character to the dialed number
   function addCharacter(char: string) {
-      setDialedNumber(dialedNumber + char);
+      if (dialedNumber.length < 3) {
+          setDialedNumber(dialedNumber + char);
+      }
   }
 
   // removes a character from the dialed number
@@ -35,10 +37,20 @@ const PhoneDisplay: React.FC<PhoneDisplayProps> = () => {
         CALL FOR EMERGENCY
       </IonItem>
       <IonItem className="numberDisplay">
-        <IonLabel className="numberLabel">
+        <IonLabel className="numberLabel" id="dialed">
           {dialedNumber}
         </IonLabel>
       </IonItem>
+      <CreateAnimation
+        duration={50}
+        iterations={2}
+        keyframes={[
+          { offset: 0, left: '0px'},
+          { offset: 0.5, left: '5px'},
+          { offset: 1, left: '0px'}
+        ]}
+      >
+      </CreateAnimation>
       <IonGrid>
         <IonRow>
           <IonCol>
@@ -87,7 +99,7 @@ const PhoneDisplay: React.FC<PhoneDisplayProps> = () => {
         <IonRow>
           <IonCol></IonCol>
           <IonCol>
-            <IonRouterLink href={isCorrect() ? './goodjob/home/question:0' : './tryagain'}>
+            <IonRouterLink href={isCorrect() ? './goodjob/home/question:0/1' : './tryagain'}>
               <IonButton shape="round" fill="outline" color="success" size="large" className="phoneButton">
                 <IonIcon icon={call} size="small"></IonIcon>
               </IonButton>

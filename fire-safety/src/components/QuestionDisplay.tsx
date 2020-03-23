@@ -12,20 +12,21 @@ interface QuestionDisplayRoutingProps {
 const QuestionDisplay: React.FC<QuestionDisplayRoutingProps> = (props: QuestionDisplayRoutingProps) => {
     const questionIndex = props.questionIndex;
     const { text, icon, color } = Questions[questionIndex];
-    console.log('color', color);
+
     // develop the previous and next urls for navigation
+    // the goodjob component takes the previous url, next url, and number of stars to render as path parameters
     let prevUrl: string;
     let nextUrl: string;
 
     if (questionIndex == 0) {
         prevUrl = './home';
-        nextUrl = `./goodjob/question:${questionIndex}/question:${questionIndex + 1}`;
+        nextUrl = `./goodjob/question:${questionIndex}/question:${questionIndex + 1}/${questionIndex + 2}`;
     } else if (questionIndex == (Questions.length - 1)) {
         prevUrl = './question/' + (questionIndex - 1);
-        nextUrl = `./goodjob/question:${questionIndex}/home`;
+        nextUrl = `./goodjob/question:${questionIndex}/home/${questionIndex + 2}`;
     } else {
         prevUrl = './question/' + (questionIndex - 1);
-        nextUrl = `./goodjob/question:${questionIndex}/question:${questionIndex + 1}`;
+        nextUrl = `./goodjob/question:${questionIndex}/question:${questionIndex + 1}/${questionIndex + 2}`;
     }
 
     return (
