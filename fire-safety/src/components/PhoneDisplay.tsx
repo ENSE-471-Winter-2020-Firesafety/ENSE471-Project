@@ -32,7 +32,7 @@ const PhoneDisplay: React.FC<PhoneDisplayProps> = () => {
   return (
     <div className="phoneContainer container">
       <IonItem className="textDisplay">
-        Call for Emergency
+        CALL FOR EMERGENCY
       </IonItem>
       <IonItem className="numberDisplay">
         <IonLabel className="numberLabel">

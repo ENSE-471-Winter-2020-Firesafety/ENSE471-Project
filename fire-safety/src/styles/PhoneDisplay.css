@@ -5,7 +5,7 @@
 
 .textDisplay {
   color: grey;
-  font-size: 30px;
+  font-size: 23px;
   text-align: center;
   --inner-padding-top: 20px;
 }
