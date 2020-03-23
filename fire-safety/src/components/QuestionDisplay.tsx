@@ -1,7 +1,7 @@
 import React from 'react';
-import { IonCol, IonGrid, IonIcon, IonItem, IonImg, IonRouterLink, IonRow } from '@ionic/react';
-import { call, chevronBackOutline, chevronForwardOutline, flame, home, person } from 'ionicons/icons';
-import { QuestionType, Questions } from '../data';
+import { IonCol, IonGrid, IonIcon, IonItem, IonRouterLink, IonRow } from '@ionic/react';
+import { chevronBackOutline, chevronForwardOutline } from 'ionicons/icons';
+import { Questions } from '../data';
 import '../styles/General.css';
 
 interface QuestionDisplayRoutingProps {

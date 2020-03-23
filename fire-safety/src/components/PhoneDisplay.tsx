@@ -3,6 +3,7 @@ import { backspaceOutline, call } from 'ionicons/icons';
 import { IonButton, IonCol, IonGrid, IonIcon, IonItem, IonLabel, IonRouterLink, IonRow } from '@ionic/react';
 import '../styles/General.css';
 import '../styles/PhoneDisplay.css';
+import PhoneButton from './PhoneButton';
 
 interface PhoneDisplayProps { }
 
@@ -41,46 +42,46 @@ const PhoneDisplay: React.FC<PhoneDisplayProps> = () => {
       <IonGrid>
         <IonRow>
           <IonCol>
-            <IonButton shape="round" fill="outline" color="medium" size="large" className="phoneButton" onClick={() => addCharacter('1')}>1</IonButton>
+            <PhoneButton mainText='1' subText='' addCharacter={addCharacter} />
           </IonCol>
           <IonCol>
-            <IonButton shape="round" fill="outline" color="medium" size="large" className="phoneButton" onClick={() => addCharacter('2')}>2</IonButton>
+            <PhoneButton mainText='2' subText='ABC' addCharacter={addCharacter} />
           </IonCol>
           <IonCol>
-            <IonButton shape="round" fill="outline" color="medium" size="large" className="phoneButton" onClick={() => addCharacter('3')}>3</IonButton>
-          </IonCol>
-        </IonRow>
-        <IonRow>
-          <IonCol>
-            <IonButton shape="round" fill="outline" color="medium" size="large" className="phoneButton" onClick={() => addCharacter('4')}>4</IonButton>
-          </IonCol>
-          <IonCol>
-            <IonButton shape="round" fill="outline" color="medium" size="large" className="phoneButton" onClick={() => addCharacter('5')}>5</IonButton>
-          </IonCol>
-          <IonCol>
-            <IonButton shape="round" fill="outline" color="medium" size="large" className="phoneButton" onClick={() => addCharacter('6')}>6</IonButton>
+            <PhoneButton mainText='3' subText='DEF' addCharacter={addCharacter} />
           </IonCol>
         </IonRow>
         <IonRow>
           <IonCol>
-            <IonButton shape="round" fill="outline" color="medium" size="large" className="phoneButton" onClick={() => addCharacter('7')}>7</IonButton>
+            <PhoneButton mainText='4' subText='GHI' addCharacter={addCharacter} />
           </IonCol>
           <IonCol>
-            <IonButton shape="round" fill="outline" color="medium" size="large" className="phoneButton" onClick={() => addCharacter('8')}>8</IonButton>
+            <PhoneButton mainText='5' subText='JKL' addCharacter={addCharacter} />
           </IonCol>
           <IonCol>
-            <IonButton shape="round" fill="outline" color="medium" size="large" className="phoneButton" onClick={() => addCharacter('9')}>9</IonButton>
+            <PhoneButton mainText='6' subText='MNO' addCharacter={addCharacter} />
           </IonCol>
         </IonRow>
         <IonRow>
           <IonCol>
-            <IonButton shape="round" fill="outline" color="medium" size="large" className="phoneButton" onClick={() => addCharacter('*')}>*</IonButton>
+            <PhoneButton mainText='7' subText='PQRS' addCharacter={addCharacter} />
           </IonCol>
           <IonCol>
-            <IonButton shape="round" fill="outline" color="medium" size="large" className="phoneButton" onClick={() => addCharacter('0')}>0</IonButton>
+            <PhoneButton mainText='8' subText='TUV' addCharacter={addCharacter} />
           </IonCol>
           <IonCol>
-            <IonButton shape="round" fill="outline" color="medium" size="large" className="phoneButton" onClick={() => addCharacter('#')}>#</IonButton>
+            <PhoneButton mainText='9' subText='WXYZ' addCharacter={addCharacter} />
+          </IonCol>
+        </IonRow>
+        <IonRow>
+          <IonCol>
+            <PhoneButton mainText='*' subText='' addCharacter={addCharacter} />
+          </IonCol>
+          <IonCol>
+            <PhoneButton mainText='0' subText='+' addCharacter={addCharacter} />
+          </IonCol>
+          <IonCol>
+            <PhoneButton mainText='#' subText='' addCharacter={addCharacter} />
           </IonCol>
         </IonRow>
         <IonRow>

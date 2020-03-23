@@ -19,3 +19,12 @@
 .numberLabel {
   height: 1em
 }
+
+.subText {
+  font-size: 10px;
+}
+
+.phoneButton {
+  width: 3.2em;
+  height: 3.2em;
+}

@@ -3,7 +3,7 @@ import { IonCol, IonGrid, IonIcon, IonItem, IonImg, IonRouterLink, IonRow } from
 import { chevronBackOutline, chevronForwardOutline } from 'ionicons/icons';
 import '../styles/General.css';
 
-interface GoodJobRoutingProps {
+interface GoodJobProps {
     prevPage: string;
     nextPage: string;
 }
@@ -15,7 +15,7 @@ type Item = {
 
 const sparkyImg: Item = { src: 'assets/images/sparky.jpg', text: ''}
 
-const GoodJobDisplay: React.FC<GoodJobRoutingProps> = (props: GoodJobRoutingProps) => (
+const GoodJobDisplay: React.FC<GoodJobProps> = (props: GoodJobProps) => (
   <>
     <IonItem className='textDisplay'>
       Good Job!
