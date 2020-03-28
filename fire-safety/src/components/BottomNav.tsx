@@ -19,7 +19,7 @@ const BottomNav: React.FC<BottomNavProps> = (props: BottomNavProps) => (
           </IonRouterLink>
         </IonCol>
         <IonCol className={props.selected == SelectedPage.QUESTIONS ? "selected" : ""}>
-          <IonRouterLink href="./home">
+          <IonRouterLink href="./questionlist">
             <IonIcon icon={chatbubbleEllipses} size="large" className='toolBarIcon'></IonIcon>
           </IonRouterLink>
         </IonCol>

@@ -3,6 +3,7 @@ import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
+import QuestionListPage from './pages/QuestionListPage';
 import GoodJobPage from './pages/GoodJobPage';
 import QuestionPage from './pages/QuestionPage';
 import TryAgainPage from './pages/TryAgainPage';
@@ -31,6 +32,7 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonRouterOutlet>
         <Route path="/home" component={Home} exact={true} />
+        <Route path="/questionlist" component={QuestionListPage} exact={true} />
         <Route path="/goodjob/:prevPage/:nextPage/:numStars" component={GoodJobPage} exact={true} />
         <Route path="/tryagain" component={TryAgainPage} exact={true} />
         <Route path="/question/:choice" component={QuestionPage} exact={true} />
