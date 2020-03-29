@@ -16,7 +16,7 @@ const QuestionListItem: React.FC<QuestionListItemProps> = (props: QuestionListIt
             {question}
           </IonItem>
           <IonItem className='answer'>
-            {answer}
+            Ans: {answer}
           </IonItem>
         </>
     );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonItem, IonList } from '@ionic/react';
+import { IonList, IonListHeader } from '@ionic/react';
 import '../styles/General.css';
 import { QuestionType, Questions } from '../data';
 import QuestionListItem from './QuestionListItem';
@@ -9,9 +9,9 @@ const QuestionListDisplay: React.FC = () => {
 
   return (
     <div className="container">
-      <IonItem className="textDisplay">
+      <IonListHeader className="textDisplay" style={{marginTop: '10px'}}>
         911 Questions
-      </IonItem>
+      </IonListHeader>
       <IonList>
         {Questions.map((question: QuestionType) => (
             <QuestionListItem question={question.text} answer={question.sampleAnswer}/>

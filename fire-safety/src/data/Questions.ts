@@ -3,7 +3,6 @@ import { call, bonfire, home, person } from 'ionicons/icons';
 export interface QuestionType {
     text: string;
     icon: string;
-    color?: string;
     sampleAnswer: string;
 }
 
@@ -11,7 +10,6 @@ export const Questions: QuestionType[] = [
     {
         text: '911 What is your Emergency?',
         icon: bonfire,
-        color: 'orange',
         sampleAnswer: 'There is a fire at my house.'
     },
     {

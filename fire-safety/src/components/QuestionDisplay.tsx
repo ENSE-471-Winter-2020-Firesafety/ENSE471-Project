@@ -11,7 +11,7 @@ interface QuestionDisplayRoutingProps {
 // renders text with icon for the question, and renders links to previous and next question
 const QuestionDisplay: React.FC<QuestionDisplayRoutingProps> = (props: QuestionDisplayRoutingProps) => {
     const questionIndex = props.questionIndex;
-    const { text, icon, color } = Questions[questionIndex];
+    const { text, icon } = Questions[questionIndex];
 
     // develop the previous and next urls for navigation
     // the goodjob component takes the previous url, next url, and number of stars to render as path parameters
