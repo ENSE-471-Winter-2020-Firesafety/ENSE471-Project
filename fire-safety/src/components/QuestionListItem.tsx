@@ -1,7 +1,7 @@
 import React from 'react';
 import { IonItem } from '@ionic/react';
 import '../styles/General.css';
-import '../styles/QuestionList.css';
+import '../styles/List.css';
 
 interface QuestionListItemProps {
     question: string;
@@ -12,10 +12,10 @@ const QuestionListItem: React.FC<QuestionListItemProps> = (props: QuestionListIt
     const { question, answer } = props;
     return (
         <>
-          <IonItem className='question'>
+          <IonItem className='maintext'>
             {question}
           </IonItem>
-          <IonItem className='answer'>
+          <IonItem className='subtext'>
             Ans: {answer}
           </IonItem>
         </>

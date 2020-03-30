@@ -26,5 +26,5 @@ export const Questions: QuestionType[] = [
         text: 'What is your phone number?',
         icon: call,
         sampleAnswer: '306 555 6836'
-    }
+    },
 ]

@@ -1,0 +1,9 @@
+.infoLink {
+  margin-top: 15px;
+  font-size: 16px;
+  width: 17em;
+}
+
+.infoLinkContainer {
+  align-items: center;
+}

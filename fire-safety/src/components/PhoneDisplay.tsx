@@ -106,8 +106,8 @@ const PhoneDisplay: React.FC<PhoneDisplayProps> = () => {
             </IonRouterLink>
           </IonCol>
           <IonCol>
-            <IonButton shape="round" fill="clear" className="phoneButton" onClick={() => removeCharacter()}>
-              <IonIcon icon={backspaceOutline} size="large" className="backSpaceIcon"></IonIcon>
+            <IonButton shape="round" fill="clear" className="backSpaceIcon" onClick={() => removeCharacter()}>
+              <IonIcon icon={backspaceOutline} size="large"></IonIcon>
             </IonButton>
           </IonCol>
         </IonRow>
