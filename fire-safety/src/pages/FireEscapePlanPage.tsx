@@ -2,20 +2,20 @@ import { IonContent, IonPage } from '@ionic/react';
 import React from 'react';
 import BottomNav from '../components/BottomNav';
 
-import AdditionalQuestionDisplay from '../components/AdditionalQuestionDisplay';
+import FireEscapePlanDisplay from '../components/FireEscapePlanDisplay';
 
 import { SelectedPage } from '../types';
 import './Home.css';
 
-const AdditionalQuestionPage: React.FC = () => {
+const FireEscapePlanPage: React.FC = () => {
   return (
     <IonPage>
       <IonContent>
-        <AdditionalQuestionDisplay />
+        <FireEscapePlanDisplay />
         <BottomNav selected={SelectedPage.NONE}/>
       </IonContent>
     </IonPage>
   );
 };
 
-export default AdditionalQuestionPage;
+export default FireEscapePlanPage;

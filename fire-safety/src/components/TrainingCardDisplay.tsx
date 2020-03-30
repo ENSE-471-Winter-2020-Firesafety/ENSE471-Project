@@ -1,6 +1,8 @@
 import React from 'react';
-import { IonItem, IonImg } from '@ionic/react';
+import { IonIcon, IonImg, IonListHeader, IonRouterLink } from '@ionic/react';
+import { chevronBackOutline } from 'ionicons/icons';
 import '../styles/General.css';
+import '../styles/Info.css';
 
 type Item = {
     src: string;
@@ -27,9 +29,12 @@ const TrainingCards: Item[] = [
 const TrainingCardDisplay: React.FC = () => {
     return (
       <>
-        <IonItem className='textDisplay'>
+        <IonListHeader className="textDisplay infoBackIcon">
+          <IonRouterLink href="./info">
+            <IonIcon icon={chevronBackOutline} size="large" className='navIcon'></IonIcon>
+          </IonRouterLink>
           Training Cards
-        </IonItem>
+        </IonListHeader>
         {TrainingCards.map((card: Item) => (
           <IonImg src={card.src} className="contentImage"/>
         ))}

@@ -16,7 +16,7 @@ const InfoPage: React.FC = () => {
         <IonGrid>
           <IonRow>
             <IonCol className="ion-text-center">
-              <IonButton fill="outline" color="medium" size="large" shape="round" className="infoLink">
+              <IonButton fill="outline" color="medium" size="large" shape="round" className="infoLink" href="./escapeplan">
                 Fire Escape Plan
               </IonButton>
             </IonCol>

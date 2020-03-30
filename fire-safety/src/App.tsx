@@ -2,12 +2,13 @@ import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Home from './pages/Home';
+import AdditionalQuestionPage from './pages/AdditionalQuestionPage';
+import FireEscapePlanPage from './pages/FireEscapePlanPage';
 import GoodJobPage from './pages/GoodJobPage';
+import Home from './pages/Home';
 import InfoPage from './pages/InfoPage';
 import QuestionListPage from './pages/QuestionListPage';
 import QuestionPage from './pages/QuestionPage';
-import AdditionalQuestionPage from './pages/AdditionalQuestionPage';
 import TrainingCardPage from './pages/TrainingCardPage';
 import TryAgainPage from './pages/TryAgainPage';
 
@@ -42,6 +43,7 @@ const App: React.FC = () => (
         <Route path="/question/:choice" component={QuestionPage} exact={true} />
         <Route path="/additionalquestions" component={AdditionalQuestionPage} exact={true} />
         <Route path="/trainingcards" component={TrainingCardPage} exact={true} />
+        <Route path="/escapeplan" component={FireEscapePlanPage} exact={true} />
         <Route exact path="/" render={() => <Redirect to="/home" />} />
       </IonRouterOutlet>
     </IonReactRouter>

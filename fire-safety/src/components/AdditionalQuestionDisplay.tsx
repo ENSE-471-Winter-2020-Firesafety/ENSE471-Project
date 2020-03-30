@@ -1,6 +1,8 @@
 import React from 'react';
-import { IonList, IonListHeader, IonItem } from '@ionic/react';
+import { IonList, IonListHeader, IonIcon, IonItem, IonRouterLink } from '@ionic/react';
+import { chevronBackOutline } from 'ionicons/icons';
 import '../styles/General.css';
+import '../styles/Info.css';
 import { AdditionalQuestionType, AdditionalQuestions } from '../data';
 import AdditionalQuestionListItem from './AdditionalQuestionListItem';
 
@@ -9,7 +11,10 @@ const AdditionalQuestionDisplay: React.FC = () => {
 
   return (
     <div className="container">
-      <IonListHeader className="textDisplay" style={{marginTop: '10px'}}>
+      <IonListHeader className="textDisplay infoBackIcon">
+        <IonRouterLink href="./info">
+          <IonIcon icon={chevronBackOutline} size="large" className='navIcon'></IonIcon>
+        </IonRouterLink>
         Additional 911 Questions
       </IonListHeader>
       <IonList>
