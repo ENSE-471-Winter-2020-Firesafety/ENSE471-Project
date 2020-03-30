@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import { backspaceOutline, call } from 'ionicons/icons';
+import DTMF, { KeypadKey } from '@kimmel/dtmf'
 import { CreateAnimation, IonButton, IonCol, IonGrid, IonIcon, IonItem, IonLabel, IonRouterLink, IonRow } from '@ionic/react';
 import '../styles/General.css';
 import '../styles/PhoneDisplay.css';
 import PhoneButton from './PhoneButton';
 
 interface PhoneDisplayProps { }
+
+// used to play number dial sounds
+const player = new DTMF();
 
 const PhoneDisplay: React.FC<PhoneDisplayProps> = () => {
   const [ dialedNumber, setDialedNumber ] = useState('');
@@ -14,6 +18,10 @@ const PhoneDisplay: React.FC<PhoneDisplayProps> = () => {
   function addCharacter(char: string) {
       if (dialedNumber.length < 3) {
           setDialedNumber(dialedNumber + char);
+          player.play(char as KeypadKey);
+          setTimeout(() => {
+              player.stop();
+          }, 300);
       }
   }
 
