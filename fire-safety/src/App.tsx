@@ -8,6 +8,7 @@ import InfoPage from './pages/InfoPage';
 import QuestionListPage from './pages/QuestionListPage';
 import QuestionPage from './pages/QuestionPage';
 import AdditionalQuestionPage from './pages/AdditionalQuestionPage';
+import TrainingCardPage from './pages/TrainingCardPage';
 import TryAgainPage from './pages/TryAgainPage';
 
 /* Core CSS required for Ionic components to work properly */
@@ -40,6 +41,7 @@ const App: React.FC = () => (
         <Route path="/tryagain" component={TryAgainPage} exact={true} />
         <Route path="/question/:choice" component={QuestionPage} exact={true} />
         <Route path="/additionalquestions" component={AdditionalQuestionPage} exact={true} />
+        <Route path="/trainingcards" component={TrainingCardPage} exact={true} />
         <Route exact path="/" render={() => <Redirect to="/home" />} />
       </IonRouterOutlet>
     </IonReactRouter>

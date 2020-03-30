@@ -23,7 +23,7 @@ const InfoPage: React.FC = () => {
           </IonRow>
           <IonRow>
             <IonCol className="ion-text-center">
-              <IonButton fill="outline" color="medium" size="large" shape="round" className="infoLink">
+              <IonButton fill="outline" color="medium" size="large" shape="round" className="infoLink" href="./trainingcards">
                 Training Cards
               </IonButton>
             </IonCol>
