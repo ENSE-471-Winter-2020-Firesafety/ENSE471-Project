@@ -1,4 +1,4 @@
-import { IonButton, IonCol, IonContent, IonGrid, IonListHeader, IonPage, IonRow } from '@ionic/react';
+import { IonButton, IonCol, IonContent, IonGrid, IonPage, IonRow } from '@ionic/react';
 import React from 'react';
 import BottomNav from '../components/BottomNav';
 
@@ -9,10 +9,10 @@ import '../styles/General.css';
 const InfoPage: React.FC = () => {
   return (
     <IonPage>
-      <IonContent>
-        <IonListHeader className="textDisplay" style={{marginTop: '10px'}}>
+      <IonContent className='centered'>
+        <div className="textDisplay" style={{marginTop: '10px'}}>
           Info
-        </IonListHeader>
+        </div>
         <IonGrid>
           <IonRow>
             <IonCol className="ion-text-center">

@@ -2,16 +2,12 @@ import React from 'react';
 import { IonCol, IonGrid, IonIcon, IonItem, IonImg, IonRouterLink, IonRow } from '@ionic/react';
 import { chevronBackOutline, chevronForwardOutline } from 'ionicons/icons';
 import '../styles/General.css';
+import { Item } from '../types';
 
 interface GoodJobProps {
     prevPage: string;
     nextPage: string;
     numStars: number;
-}
-
-type Item = {
-    src: string;
-    text: string;
 }
 
 const GoodJobDisplay: React.FC<GoodJobProps> = (props: GoodJobProps) => {
@@ -23,12 +19,11 @@ const GoodJobDisplay: React.FC<GoodJobProps> = (props: GoodJobProps) => {
     }
     const sparkyImg: Item = { src: `assets/images/sparky-${numStars}.jpg`, text: ''}
     return (
-      <>
-        <IonItem className='textDisplay'>
-          Good Job!
-        </IonItem>
+      <div className='centered'>
         <IonImg src={sparkyImg.src} className="contentImage"/>
-
+        <div className='goodJob'>
+          GOOD JOB!
+        </div>
         <IonGrid className='ion-text-center'>
           <IonRow>
             <IonCol>
@@ -45,7 +40,7 @@ const GoodJobDisplay: React.FC<GoodJobProps> = (props: GoodJobProps) => {
             </IonCol>
           </IonRow>
         </IonGrid>
-      </>
+      </div>
     )
 }
 

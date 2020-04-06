@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonCol, IonGrid, IonIcon, IonItem, IonRouterLink, IonRow } from '@ionic/react';
+import { IonCol, IonGrid, IonIcon, IonRouterLink, IonRow } from '@ionic/react';
 import { chevronBackOutline, chevronForwardOutline } from 'ionicons/icons';
 import { Questions } from '../data';
 import '../styles/General.css';
@@ -31,9 +31,9 @@ const QuestionDisplay: React.FC<QuestionDisplayRoutingProps> = (props: QuestionD
 
     return (
         <>
-          <IonItem className='textDisplay'>
+          <div className='textDisplay'>
             {text}
-          </IonItem>
+          </div>
           <div className='hintIconContainer'>
             <IonIcon icon={icon} size="large" className='navIcon'></IonIcon>
           </div>

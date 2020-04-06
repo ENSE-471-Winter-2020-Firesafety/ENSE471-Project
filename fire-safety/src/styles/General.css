@@ -1,27 +1,27 @@
 .textDisplay {
+  display: inline-block;
+  vertical-align: middle;
   color: grey;
-  font-size: 35px;
+  font-size: 30px;
   text-align: center;
-  --inner-padding-top: 20px;
+  padding-top: 10px;
 }
 
 .numberDisplay {
+  display: inline-block;
+  vertical-align: middle;
   color: black;
   font-size: 35px;
   text-align: center;
+  padding: 3px 0px;
+  margin: 0px 10px;
 }
 
 .navIcon {
   color: grey;
-}
-
-.contentImage {
-  padding: 50px 25px;
-  height: 400px
-}
-
-.centered {
-  align-items: center;
+  display: inline-block;
+  font-size: 35px;
+  vertical-align: middle;
 }
 
 .hintIconContainer {
@@ -29,4 +29,46 @@
   text-align: center;
   height: 50%;
   padding-top: 30%;
+}
+
+.centered {
+  text-align: center;
+}
+
+.goodJob {
+  color: darkgreen;
+  font-size: 30px;
+}
+
+.tryAgain {
+  font-size: 30px;
+  padding-top: 35px;
+}
+
+.imageList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contentImage {
+  padding: 0 40px;
+  max-width: 100%;
+}
+
+.exampleImage {
+  padding-bottom: 50px;
+  width: 70%;
+}
+
+@keyframes jiggle {
+  0%   {color: maroon; margin-left: 10px}
+  25%  {margin-left: 0px}
+  50%  {color: maroon; margin-left: 10px}
+  100% {margin-left: 0px}
+}
+
+.jiggle {
+  animation-name: jiggle;
+  animation-duration: 0.25s;
 }

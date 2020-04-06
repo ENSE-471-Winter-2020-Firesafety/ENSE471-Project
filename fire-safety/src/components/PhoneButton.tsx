@@ -12,7 +12,7 @@ interface PhoneButtonProps {
 const PhoneButton: React.FC<PhoneButtonProps> = (props: PhoneButtonProps) => {
     const { mainText, subText, addCharacter } = props;
     return (
-      <IonButton shape="round" fill="outline" color="medium" size="large" onClick={() => addCharacter(mainText)} className='phoneButton'>
+      <IonButton shape="round" fill="solid" color="medium" size="large" onClick={() => addCharacter(mainText)} className='phoneButton'>
         <div>
           <div>{mainText}</div>
           <div className='subText'>{subText}</div>

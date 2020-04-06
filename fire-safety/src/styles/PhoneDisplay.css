@@ -3,13 +3,6 @@
   color: grey;
 }
 
-.textDisplay {
-  color: grey;
-  font-size: 23px;
-  text-align: center;
-  --inner-padding-top: 20px;
-}
-
 .numberDisplay {
   color: black;
   font-size: 35px;

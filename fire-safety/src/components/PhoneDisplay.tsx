@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { backspaceOutline, call } from 'ionicons/icons';
 import DTMF, { KeypadKey } from '@kimmel/dtmf'
-import { CreateAnimation, IonButton, IonCol, IonGrid, IonIcon, IonItem, IonLabel, IonRouterLink, IonRow } from '@ionic/react';
+import { IonButton, IonCol, IonGrid, IonIcon, IonItem, IonRouterLink, IonRow } from '@ionic/react';
 import '../styles/General.css';
 import '../styles/PhoneDisplay.css';
 import PhoneButton from './PhoneButton';
@@ -22,6 +22,14 @@ const PhoneDisplay: React.FC<PhoneDisplayProps> = () => {
           setTimeout(() => {
               player.stop();
           }, 300);
+      } else {
+          // jiggle the text when the user tries to add more than three characters
+          // NOTE: setTimeout ms value should be the same as the animation-duration in General.css
+          const text = document.getElementById('dialed');
+          text!.className = 'jiggle numberLabel';
+          setTimeout(() => {
+              text!.className = 'numberLabel';
+          }, 250);
       }
   }
 
@@ -41,24 +49,14 @@ const PhoneDisplay: React.FC<PhoneDisplayProps> = () => {
 
   return (
     <div className="phoneContainer container" style={{width: '300px'}}>
-      <IonItem className="textDisplay">
+      <div className="textDisplay">
         CALL FOR EMERGENCY
-      </IonItem>
-      <IonItem className="numberDisplay">
-        <IonLabel className="numberLabel" id="dialed">
+      </div>
+      <IonItem className="numberDisplay" lines="none">
+        <div className="numberLabel" id="dialed">
           {dialedNumber}
-        </IonLabel>
+        </div>
       </IonItem>
-      <CreateAnimation
-        duration={50}
-        iterations={2}
-        keyframes={[
-          { offset: 0, left: '0px'},
-          { offset: 0.5, left: '5px'},
-          { offset: 1, left: '0px'}
-        ]}
-      >
-      </CreateAnimation>
       <IonGrid>
         <IonRow>
           <IonCol>
@@ -108,7 +106,7 @@ const PhoneDisplay: React.FC<PhoneDisplayProps> = () => {
           <IonCol></IonCol>
           <IonCol>
             <IonRouterLink href={isCorrect() ? './goodjob/home/question:0/1' : './tryagain'}>
-              <IonButton shape="round" fill="outline" color="success" size="large" className="phoneButton">
+              <IonButton shape="round" fill="solid" color="success" size="large" className="phoneButton">
                 <IonIcon icon={call} size="small"></IonIcon>
               </IonButton>
             </IonRouterLink>

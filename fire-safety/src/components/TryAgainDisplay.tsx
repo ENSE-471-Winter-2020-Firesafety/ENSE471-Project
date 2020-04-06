@@ -2,11 +2,7 @@ import React from 'react';
 import { IonIcon, IonItem, IonImg, IonRouterLink } from '@ionic/react';
 import { chevronBackOutline } from 'ionicons/icons';
 import '../styles/General.css';
-
-type Item = {
-    src: string;
-    text: string;
-}
+import { Item } from '../types';
 
 const thumbsUpImage: Item = { src: 'assets/images/try-again.jpg', text: ''}
 
@@ -22,16 +18,17 @@ const TryAgainDisplay: React.FC = () => {
     }, 3000);
 
     return (
-      <>
-        <IonItem className='textDisplay'>
-          Try Again!
-        </IonItem>
+      <div className='centered'>
         <IonImg src={thumbsUpImage.src} className="contentImage"/>
-        <IonRouterLink href='./home' routerDirection='root'>
-          <div id='gohome'></div>
-          <IonIcon icon={chevronBackOutline} size="large" className='navIcon'></IonIcon>
-        </IonRouterLink>
-      </>
+        <div className='tryAgain'>
+          <IonRouterLink href='./home' routerDirection='root' style={{color: 'blue'}}>
+            <div id='gohome'></div>
+            <IonIcon icon={chevronBackOutline} size="large" className='navIcon' style={{paddingRight: '20px', marginTop: '10px'}}></IonIcon>
+          </IonRouterLink>
+          Try Again!
+        </div>
+
+      </div>
     )
 }
 

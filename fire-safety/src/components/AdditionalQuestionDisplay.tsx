@@ -11,12 +11,12 @@ const AdditionalQuestionDisplay: React.FC = () => {
 
   return (
     <div className="container">
-      <IonListHeader className="textDisplay infoBackIcon">
+      <div className="textDisplay infoBackIcon">
         <IonRouterLink href="./info">
           <IonIcon icon={chevronBackOutline} size="large" className='navIcon'></IonIcon>
         </IonRouterLink>
         Additional 911 Questions
-      </IonListHeader>
+      </div>
       <IonList>
         <IonItem lines='none'>
           You may be asked the following questions by a 911 operator, depending on the situation:

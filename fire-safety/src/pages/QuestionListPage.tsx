@@ -5,12 +5,13 @@ import BottomNav from '../components/BottomNav';
 import QuestionListDisplay from '../components/QuestionListDisplay';
 
 import { SelectedPage } from '../types';
+import '../styles/General.css';
 import './Home.css';
 
 const QuestionListPage: React.FC = () => {
   return (
     <IonPage>
-      <IonContent>
+      <IonContent className='centered'>
         <QuestionListDisplay />
         <BottomNav selected={SelectedPage.QUESTIONS}/>
       </IonContent>

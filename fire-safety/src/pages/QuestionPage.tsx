@@ -16,8 +16,8 @@ const QuestionPage: React.FC<GoodJobRoutingProps> = ({match}) => {
   const choice = parseInt(match.params.choice);
   return (
     <IonPage>
-      <IonContent className='container'>
-        <QuestionDisplay questionIndex={choice} /> 
+      <IonContent className='centered'>
+        <QuestionDisplay questionIndex={choice} />
         <BottomNav selected={SelectedPage.NONE}/>
       </IonContent>
     </IonPage>
