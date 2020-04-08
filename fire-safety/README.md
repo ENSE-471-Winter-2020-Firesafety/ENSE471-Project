@@ -20,7 +20,10 @@ Extract the project from the zipped folder, and maneuver into the extracted fold
 
 The only step left for downloading our app is to download all of the other software packages that our app uses. This can be done with the command `npm install`.
 
-### Running the application
+## Running the application
 Assuming that the downloading and installing of packages succeeded, the app should be ready to launch. Make sure you have a browser open (like this one) because the app will attempt to make a new tab to run off of.
 
 To start the app, make sure you are in the `fire-safety` directory, and type or copy/paste the command `ionic serve`. This will open a new tab in the browser running the app. 
+
+### Running on Android and iOS
+Currently the application only supports running on an Android device, but the process to set up an emulator and the required software is beyond the scope of these instructions. 
