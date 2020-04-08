@@ -48,7 +48,7 @@ const PhoneDisplay: React.FC<PhoneDisplayProps> = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container" style={{maxWidth: '450px'}}>
       <div className="textDisplay">
         CALL FOR EMERGENCY
       </div>
