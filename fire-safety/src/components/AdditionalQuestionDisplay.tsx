@@ -17,7 +17,7 @@ const AdditionalQuestionDisplay: React.FC = () => {
         </IonRouterLink>
         Additional 911 Questions
       </div>
-      <IonList>
+      <IonList style={{paddingBottom: '60px'}}>
         <IonItem lines='none'>
           You may be asked the following questions by a 911 operator, depending on the situation:
         </IonItem>

@@ -31,9 +31,11 @@ const TrainingCardDisplay: React.FC = () => {
           </IonRouterLink>
           Training Cards
         </div>
-        {TrainingCards.map((card: Item) => (
-          <IonImg src={card.src} className="contentImage"/>
-        ))}
+        <div className='imageList'>
+          {TrainingCards.map((card: Item) => (
+            <IonImg src={card.src} className="contentImage"/>
+          ))}
+        </div>
       </>
     )
 }

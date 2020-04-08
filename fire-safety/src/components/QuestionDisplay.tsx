@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonCol, IonGrid, IonIcon, IonRouterLink, IonRow } from '@ionic/react';
+import { IonCol, IonFooter, IonGrid, IonIcon, IonRouterLink, IonRow } from '@ionic/react';
 import { chevronBackOutline, chevronForwardOutline } from 'ionicons/icons';
 import { Questions } from '../data';
 import '../styles/General.css';
@@ -30,30 +30,32 @@ const QuestionDisplay: React.FC<QuestionDisplayRoutingProps> = (props: QuestionD
     }
 
     return (
-        <>
+        <div className='centered'>
           <div className='textDisplay'>
             {text}
           </div>
           <div className='hintIconContainer'>
             <IonIcon icon={icon} size="large" className='navIcon'></IonIcon>
           </div>
-          <IonGrid className='ion-text-center'>
-            <IonRow>
-              <IonCol>
-                <IonRouterLink href={prevUrl}>
-                  <IonIcon icon={chevronBackOutline} size='large' className='navIcon'></IonIcon>
-                </IonRouterLink>
-              </IonCol>
-              <IonCol>
-              </IonCol>
-              <IonCol >
-                <IonRouterLink href={nextUrl}>
-                  <IonIcon icon={chevronForwardOutline} size='large' className='navIcon'></IonIcon>
-                </IonRouterLink>
-              </IonCol>
-            </IonRow>
-          </IonGrid>
-        </>
+          <IonFooter className="sideArrowNav ion-no-border">
+            <IonGrid className='ion-text-center'>
+              <IonRow>
+                <IonCol>
+                  <IonRouterLink href={prevUrl}>
+                    <IonIcon icon={chevronBackOutline} size='large' className='navIcon'></IonIcon>
+                  </IonRouterLink>
+                </IonCol>
+                <IonCol>
+                </IonCol>
+                <IonCol >
+                  <IonRouterLink href={nextUrl}>
+                    <IonIcon icon={chevronForwardOutline} size='large' className='navIcon'></IonIcon>
+                  </IonRouterLink>
+                </IonCol>
+              </IonRow>
+            </IonGrid>
+          </IonFooter>
+        </div>
     );
 }
 

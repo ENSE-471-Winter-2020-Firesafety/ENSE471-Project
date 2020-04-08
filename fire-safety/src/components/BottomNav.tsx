@@ -10,7 +10,7 @@ interface BottomNavProps {
 }
 
 const BottomNav: React.FC<BottomNavProps> = (props: BottomNavProps) => (
-  <IonFooter className="bottomNav container">
+  <IonFooter className="bottomNav">
     <IonGrid>
       <IonRow>
         <IonCol className={props.selected == SelectedPage.HOME ? "selected" : ""}>

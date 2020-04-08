@@ -1,27 +1,48 @@
+.container {
+  dispay: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .textDisplay {
-  display: inline-block;
-  vertical-align: middle;
+  flex: 1 0 50%;
   color: grey;
   font-size: 30px;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 30px;
+}
+
+.buttonContainer {
+  flex: 1 0 50%;
+  text-align: center;
+  padding-top: 30px;
 }
 
 .numberDisplay {
-  display: inline-block;
-  vertical-align: middle;
+  flex: 1 0 50%;
   color: black;
   font-size: 35px;
   text-align: center;
-  padding: 3px 0px;
+  padding: 10px 0px;
   margin: 0px 10px;
+}
+
+.sideArrowNav {
+  text-align: center;
+  position: fixed;
+  bottom: 80px;
+  background-color: white;
 }
 
 .navIcon {
   color: grey;
-  display: inline-block;
   font-size: 35px;
   vertical-align: middle;
+}
+
+.iconContainer {
+  display: flex;
+  padding: 10px 110px 0px 110px;
 }
 
 .hintIconContainer {
@@ -32,29 +53,46 @@
 }
 
 .centered {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .goodJob {
   color: darkgreen;
   font-size: 30px;
-  margin-top: 40px;
+  padding-top: 40px;
+  flex: 1 0 50%;
 }
 
 .tryAgain {
   font-size: 30px;
-  padding-top: 35px;
 }
 
 .imageList {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  padding-bottom: 40px;
 }
 
 .contentImage {
-  padding: 0 40px;
-  height: 600px;
+  flex: 1 0 50%;
+  width: 70%;
+  height: auto;
+}
+
+.resultImage {
+  padding-top: 30px;
+}
+
+.arrowList {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
 }
 
 .exampleImage {

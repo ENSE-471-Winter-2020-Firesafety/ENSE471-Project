@@ -16,7 +16,7 @@ const EscapePlanExample: Item = { src: 'assets/images/escape_plan_page_3.jpg', t
 // example image width only works when it is styled in line
 const FireEscapePlanDisplay: React.FC = () => {
     return (
-      <>
+      <div className='container'>
         <div className="textDisplay infoBackIcon">
           <IonRouterLink href="./info">
             <IonIcon icon={chevronBackOutline} size="large" className='navIcon'></IonIcon>
@@ -34,7 +34,7 @@ const FireEscapePlanDisplay: React.FC = () => {
         <div className='imageList'>
           <IonImg src={EscapePlanExample.src} key={EscapePlanExample.src} className="exampleImage"/>
         </div>
-      </>
+      </div>
     )
 }
 

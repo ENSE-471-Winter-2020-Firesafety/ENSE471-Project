@@ -3,12 +3,6 @@
   color: grey;
 }
 
-.numberDisplay {
-  color: black;
-  font-size: 35px;
-  text-align: center;
-}
-
 .numberLabel {
   height: 1em
 }

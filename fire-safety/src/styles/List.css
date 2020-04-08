@@ -1,10 +1,12 @@
 .maintext {
   color: black;
   font-size: 22px;
+  padding-bottom: 10px;
 }
 
 .subtext {
   color: grey;
   font-size: 18px;
   padding-left: 25px;
+  padding-bottom: 10px;
 }

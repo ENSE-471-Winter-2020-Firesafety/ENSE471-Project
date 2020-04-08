@@ -19,7 +19,7 @@ const TryAgainDisplay: React.FC = () => {
 
     return (
       <div className='centered'>
-        <IonImg src={thumbsUpImage.src} className="contentImage"/>
+        <IonImg src={thumbsUpImage.src} className="contentImage resultImage"/>
         <div className='tryAgain'>
           <IonRouterLink href='./home' routerDirection='root' style={{color: 'blue'}}>
             <div id='gohome'></div>
