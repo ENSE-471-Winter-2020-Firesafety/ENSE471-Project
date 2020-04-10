@@ -12,6 +12,14 @@
   padding-top: 30px;
 }
 
+.textDisplayLow {
+  flex: 1 0 50%;
+  color: grey;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 100px;
+}
+
 .buttonContainer {
   flex: 1 0 50%;
   text-align: center;
@@ -67,6 +75,7 @@
 }
 
 .tryAgain {
+  padding-top: 105px;
   font-size: 30px;
 }
 

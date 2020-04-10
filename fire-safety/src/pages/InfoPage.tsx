@@ -13,29 +13,31 @@ const InfoPage: React.FC = () => {
         <div className="textDisplay" style={{marginTop: '10px'}}>
           Info
         </div>
-        <IonGrid>
-          <IonRow>
-            <IonCol className="ion-text-center">
-              <IonButton fill="outline" color="medium" size="large" shape="round" className="infoLink" href="./escapeplan">
-                Fire Escape Plan
-              </IonButton>
-            </IonCol>
-          </IonRow>
-          <IonRow>
-            <IonCol className="ion-text-center">
-              <IonButton fill="outline" color="medium" size="large" shape="round" className="infoLink" href="./trainingcards">
-                Training Cards
-              </IonButton>
-            </IonCol>
-          </IonRow>
-          <IonRow>
-            <IonCol className="ion-text-center">
-              <IonButton fill="outline" color="medium" size="large" shape="round" className="infoLink" href="./additionalquestions">
-                Additional Questions
-              </IonButton>
-            </IonCol>
-          </IonRow>
-        </IonGrid>
+        <div style={{paddingTop: '100px'}}>
+          <IonGrid>
+            <IonRow>
+              <IonCol className="ion-text-center">
+                <IonButton fill="outline" color="medium" size="large" shape="round" className="infoLink" href="./escapeplan">
+                  Fire Escape Plan
+                </IonButton>
+              </IonCol>
+            </IonRow>
+            <IonRow>
+              <IonCol className="ion-text-center">
+                <IonButton fill="outline" color="medium" size="large" shape="round" className="infoLink" href="./trainingcards">
+                  Training Cards
+                </IonButton>
+              </IonCol>
+            </IonRow>
+            <IonRow>
+              <IonCol className="ion-text-center">
+                <IonButton fill="outline" color="medium" size="large" shape="round" className="infoLink" href="./additionalquestions">
+                  Additional Questions
+                </IonButton>
+              </IonCol>
+            </IonRow>
+          </IonGrid>
+        </div>
         <BottomNav selected={SelectedPage.INFO}/>
       </IonContent>
     </IonPage>

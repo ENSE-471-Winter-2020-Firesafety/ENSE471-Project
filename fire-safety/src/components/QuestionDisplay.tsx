@@ -31,7 +31,7 @@ const QuestionDisplay: React.FC<QuestionDisplayRoutingProps> = (props: QuestionD
 
     return (
         <div className='centered'>
-          <div className='textDisplay'>
+          <div className='textDisplayLow'>
             {text}
           </div>
           <div className='hintIconContainer'>
