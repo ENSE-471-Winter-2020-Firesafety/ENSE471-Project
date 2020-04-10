@@ -2,6 +2,9 @@
 This folder is the home of the demo fire-safety application, and any installation or usage of the app should start here. 
 Our app uses the [Ionic](https://ionicframework.com/) framework to build cross platform web/mobile apps. Currently, we only have a web version and an android version available.
 
+## How-To
+For a walk through of our application, go to the 'How-to Document' in the 'Deliverable 4' section.
+
 ## Installation
 Our app uses [Node.js](https://nodejs.org/en/) in order to function. 
 
